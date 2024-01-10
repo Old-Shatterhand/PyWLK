@@ -6,7 +6,7 @@ source:
   path: ..
 
 build:
-  script: python -m pip install
+  script: python setup.py install
 
 requirements:
   build:
