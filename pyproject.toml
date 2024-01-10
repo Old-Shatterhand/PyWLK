@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "pywlk"
+name = "PyWLK"
 version = "1.0.0"
 description = "Python implementation of Weisfeiler-Lehman Graph Kernels"
 authors = ["Roman Joeres <joeres.roman@web.de>"]
