@@ -1,0 +1,6 @@
+pywlk/dev/
+docs/build/
+*.pclprof
+.idea/
+pywlk/__pycache__/
+tests/__pycache__/

@@ -1,0 +1,43 @@
+name: Testing
+
+on:
+  push:
+    branches:
+      - master
+      - dev
+  pull_request:
+    branches:
+      - master
+      - dev
+  workflow_dispatch:
+
+jobs:
+    test:
+      runs-on: 'ubuntu-latest'
+      steps:
+        - uses: actions/checkout@v3
+
+        - name: Setup Mamba
+          uses: conda-incubator/setup-miniconda@v2
+          with:
+            python-version: '3.8'
+            miniforge-variant: Mambaforge
+            miniforge-version: latest
+            activate-environment: MPP
+            use-mamba: true
+        - name: Install environment
+          run: |
+            mamba install -c conda-forge numpy=1.24.0
+
+        - name: Run tests
+          shell: bash -l {0}
+          run: |
+            cd tests
+            pytest --cov=../pywlk/ --cov-report=xml
+
+        - name: Upload coverage to Codecov
+          uses: codecov/codecov-action@v3
+          with:
+            token: ${{ secrets.CODECOV_TOKEN }}
+            fail_ci_if_error: false
+            files: coverage.xml
