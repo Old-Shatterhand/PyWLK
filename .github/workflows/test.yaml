@@ -27,7 +27,7 @@ jobs:
             use-mamba: true
         - name: Install environment
           run: |
-            mamba install -c conda-forge numpy=1.24.0
+            mamba install -c conda-forge numpy=1.24.0 pytest pytest-cov
 
         - name: Run tests
           shell: bash -l {0}

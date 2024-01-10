@@ -2,8 +2,7 @@ from typing import Callable, Optional, List
 
 import numpy as np
 
-from pywlk.dev.utils import adj_mat2list, get_dummy_equal, get_dummy_unequal
-from pywlk.utils import L, prep_labels
+from pywlk.utils import L, prep_labels, adj_mat2list
 
 
 def wlk(
@@ -51,12 +50,3 @@ def wlk(
     if not normalize:
         return matrix
     return np.nan_to_num(np.divide(matrix, np.sqrt(np.outer(np.diagonal(matrix), np.diagonal(matrix)))))
-
-
-def main():
-    (adj1, l1), (adj2, l2) = get_dummy_unequal()
-    print(wlk([adj1, adj2], [l1, l2], 4))
-
-
-if __name__ == '__main__':
-    main()

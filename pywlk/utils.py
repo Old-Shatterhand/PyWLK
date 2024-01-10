@@ -55,3 +55,7 @@ def prep_labels(labels: List) -> Tuple[List[List[L]], int]:
                 mapping[l] = current_id
             output[-1].append(L([mapping[l]]))
     return output, current_id
+
+
+def adj_mat2list(adj):
+    return [set(np.where(neighbors == 1)[0]) for neighbors in adj]
