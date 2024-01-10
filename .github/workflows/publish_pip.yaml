@@ -28,7 +28,7 @@ jobs:
       - name: Poetry upload
         env:
           POETRY_PYPI_TOKEN: ${{ secrets.PyPI_PyWLK }}
-        # shell: bash -l {0}
+        shell: bash -l {0}
         run: |
           poetry config pypi-token.pypi "$POETRY_PYPI_TOKEN"
           poetry publish --build
