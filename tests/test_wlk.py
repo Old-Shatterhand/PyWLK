@@ -3,8 +3,7 @@ import pytest
 from grakel import WeisfeilerLehman
 
 from pywlk import wlk
-from pywlk.dev.utils import get_dummy_equal, get_dummy_unequal
-from pywlk.dev.utils_dev import to_grakel, read
+from tests.utils import to_grakel, read, get_dummy_equal, get_dummy_unequal
 
 
 @pytest.mark.parametrize("normalize", [True, False])
