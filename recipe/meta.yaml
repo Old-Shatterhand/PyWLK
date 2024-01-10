@@ -1,5 +1,5 @@
 package:
-  name: "PyWLK"
+  name: "pywlk"
   version: "1.0.0"
 
 source:
