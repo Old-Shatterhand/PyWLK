@@ -26,7 +26,9 @@ jobs:
           pip install poetry
 
       - name: Poetry upload
-        shell: bash -l {0}
+        env:
+          POETRY_PYPI_TOKEN: ${{ secrets.PyPI_PyWLK }}
+        # shell: bash -l {0}
         run: |
-          poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
+          poetry config pypi-token.pypi "$POETRY_PYPI_TOKEN"
           poetry publish --build
