@@ -2,7 +2,7 @@ from typing import Callable, Optional, List
 
 import numpy as np
 
-from pywlk.utils import L, prep_labels, adj_mat2list
+from wlkipy.utils import L, prep_labels, adj_mat2list
 
 
 def wlk(

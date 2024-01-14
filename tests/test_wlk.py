@@ -2,7 +2,7 @@ import numpy as np
 import pytest
 from grakel import WeisfeilerLehman
 
-from pywlk import wlk
+from wlkipy import wlk
 from tests.utils import to_grakel, read, get_dummy_equal, get_dummy_unequal
 
 

@@ -8,13 +8,13 @@ This package is an alternative to FastWLK, GraKel, and other implementations of 
 By design, PyWLK is installable from PyPI and Anaconda. To install the package with `pip`, run the following command:
 
 ```bash
-pip install pywlk
+pip install wlkipy
 ```
 
 or with `conda` (alternatively with `mamba` by replacing `conda` with `mamba`
 
 ```bash
-conda install pywlk
+conda install wlkipy
 ```
 
 ## Usage
@@ -23,7 +23,7 @@ PyWLK is designed to be easy to use. The following example shows how to use PyWL
 two graphs.
 
 ```python
-from pywlk import wlk
+from wlkipy import wlk
 import numpy as np
 
 adjs = np.random.randint(0, 1, size=(2, 10, 10))

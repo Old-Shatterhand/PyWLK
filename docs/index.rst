@@ -18,7 +18,7 @@ or from Anaconda using conda:
 
 .. code-block:: bash
 
-    conda install -c conda-forge pywlk
+    conda install -c conda-forge -c roman_joeres wlkipy
 
 Usage
 -----
@@ -27,7 +27,7 @@ After installation, PyWLK can be used as follows:
 
 .. code-block:: python
 
-    from pywlk import wlk
+    from wlkipy import wlk
     import numpy as np
 
     adjs = np.random.randint(0, 1, size=(2, 10, 10))

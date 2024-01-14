@@ -4,7 +4,7 @@ with open("README.md", "r") as desc_file:
     long_description = desc_file.read()
 
 setup(
-    name="PyWLK",
+    name="wlkipy",
     version="1.0.0",
     description="Python package computing Weisfeiler-Lehman graph kernels",
     long_description=long_description,

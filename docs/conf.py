@@ -7,7 +7,7 @@ import sphinx_rtd_theme
 
 sys.path.insert(0, os.path.abspath("./.."))
 
-import pywlk
+import wlkipy
 
 extensions = [
     "sphinx.ext.autodoc",
@@ -30,7 +30,7 @@ source_suffix = ".rst"
 master_doc = "index"
 
 author = "Roman Joeres"
-project = "PyWLK"
+project = "wlkipy"
 copyright = f"{datetime.datetime.now().year}, {author}"
 
 version = list(open("../pyproject.toml", "r").readlines())[2].strip().split("\"")[1].split("\"")[0]
@@ -53,7 +53,7 @@ html_theme_options = {
     "navigation_depth": 2,
 }
 
-rst_context = {"pywlk": pywlk}
+rst_context = {"wlkipy": wlkipy}
 
 add_module_names = False
 fail_on_warning = True
